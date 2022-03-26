@@ -1,0 +1,26 @@
+{
+    "name": "Unic",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Theme changer and Night light automation",
+    "icons": {
+        "128": "unic.png"
+    },
+    "action":{
+        "default_icon": "unic.png",
+        "default_popup": "popup.html"
+    },
+   
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*",
+        "*://*/*",
+        "<all_urls>"
+    ],
+    "permissions":[
+        "activeTab",
+        "tabs",
+        "scripting"
+    ]
+    
+}
