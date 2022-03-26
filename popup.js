@@ -1,6 +1,9 @@
 
 
 if (document.querySelector(".popup")){
+  function darktheme(){
+    alert("gd");
+  }
   const themebtn = document.querySelector('#themebtn');        
   const radioButtons = document.querySelectorAll('input[name="theme"]');
   themebtn.addEventListener("click", () => {
@@ -12,20 +15,13 @@ if (document.querySelector(".popup")){
           }
       }
       if (selectedtheme == "Light"){
-        document.querySelector("html").style.filter = "invert(0) hue-rotate(0deg)";
-          let media = document.querySelector("img,picture,video");
-
-          media.forEach(mediaItems => {
-            media.style.filter = "invert() hue-rotate(0deg)";
-          });
+        chrome.scripting.executeScript({
+          file: "lighttheme.js"
+        })
       }
       else{
-          document.querySelector("html").style.filter = "invert(1) hue-rotate(180deg)";
-          let media = document.querySelector("img,picture,video");
-
-          media.forEach(mediaItems => {
-            media.style.filter = "invert(1) hue-rotate(180deg)";
-          });
+        chrome.scripting.executeScript({
+          file: "darktheme.js"})
   }
 })
 }
