@@ -17,19 +17,39 @@ if (document.querySelector(".popup")){
       if (selectedtheme == "Light"){
         chrome.scripting.executeScript({
           file: "lighttheme.js"
-        })
+        });
       }
       else{
         chrome.scripting.executeScript({
-          file: "darktheme.js"})
+          file: "darktheme.js"});
   }
 })
+
+
+
+Brightness_range = document.getElementById('Brightness-range')
+Change_brightness = document.getElementsByClassName('Change-brightness');
+Brightness_range.addEventListener("change",function(){
+  document.querySelector("html").style.filter = "brightness(" + Brightness_range.value 
+  + "%)";
+})
+
+
+Greyscale_range = document.getElementById('Greyscale-range')
+Greyscale = document.getElementsByClassName('Grey-scale');
+Greyscale_range.addEventListener("change",function(){
+  document.querySelector("html").style.filter = "saturate(" + Greyscale_range.value 
+  + "%)";
+})
+
+
+Nightlight_range = document.getElementById('Nightlight-range')
+Nightlight = document.getElementsByClassName('Night-light');
+Nightlight_range.addEventListener("change",function(){
+  document.querySelector("html").style.filter = "sepia(" + Nightlight_range.value 
+  + "%)";
+})
 }
-
-
-
-
-
 
 
 

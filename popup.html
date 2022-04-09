@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-C ompatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <title>Unic</title>
 </head>
 <style>
@@ -81,6 +81,44 @@
         color: white;
         box-shadow: 0 15px 45px rgba(24,249,141,0.2);        
     }
+
+    .Change-brightness{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Brightness-slider{
+        width: 170px;
+        height: 40px;
+        background: #2c3e50;
+        border-radius: 8px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Brightness-slider i{
+        margin: 0 10px;
+        color: aliceblue;
+    }
+
+    #Brightness-range{
+        width: 100%;
+        -webkit-appearance: none;
+        background: wheat;
+        height: 3px;
+        outline: none;
+    }
+
+    #Brightness-range::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #333;
+        border-radius: 50%;
+        cursor: pointer;
+    }
 </style>  
 
 <body class="popup">
@@ -112,8 +150,30 @@
     <p>
     <button id="themebtn">Fix theme</button>
     </p>
-
-<script src="popup.js"></script>
+    <p>Change-brightness</p>
+    <div class="Change-brightness">
+        <div class="Brightness-slider">
+            <i class="far fa-sun"></i>
+            <input type="range" id="Brightness-range" min="10" max="100" value="100">
+            <i class="fas fa-sun"></i>
+        </div>
+    </div>
+    </br>
+    <p>Grey-scale</p>
+    <div class="Grey-scale">
+        <div class="Greyscale-range">
+            <i class="far fa-sun"></i>
+            <input type="range" id="Greyscale-range" min="10" max="100" value="100">
+            <i class="fas fa-sun"></i>
+        </div>
+    <p>Night-light</p>
+    <div class="Night-light">
+        <div class="Nightlight-range">
+            <i class="far fa-sun"></i>
+            <input type="range" id="Nightlight-range" min="10" max="100" value="0">
+            <i class="fas fa-sun"></i>
+        </div>
+    <script src="popup.js"></script>
 
 </body>
 </html>
