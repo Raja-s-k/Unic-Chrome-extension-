@@ -1,1 +1,3 @@
 # Unic-Chrome-extension-
+
+This is a basic google extension project for abosolute beginners. Pls do contribute......
